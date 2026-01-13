@@ -1,29 +1,30 @@
-/* 全体のレイアウト */
+/* 全体のリセット */
 body {
     margin: 0;
     padding: 0;
     font-family: "Helvetica Neue", Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center; /* 全体を画面中央に寄せる */
+    align-items: center; /* コンテンツ全体を中央寄せ */
 }
 
-/* ヘッダー・ナビゲーションの配置 */
+/* ナビゲーションの配置 (TOPは左、その他は右) */
 header {
     width: 100%;
-    max-width: 900px;
+    max-width: 900px; /* お好みの幅に調整してください */
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .nav-container {
     display: flex;
-    justify-content: space-between; /* 左右に振り分ける */
+    justify-content: space-between; /* 左右にわける */
     align-items: center;
 }
 
 .nav-right {
     display: flex;
-    gap: 10px; /* menuとinformationの間の隙間 */
+    gap: 10px; /* ボタン同士の隙間 */
 }
 
 .nav-btn {
@@ -31,30 +32,30 @@ header {
     color: #333;
     border: 1px solid #ccc;
     padding: 8px 20px;
-    font-size: 18px;
     background-color: #fff;
 }
 
 /* 青い背景のセクション */
 .blue-section {
     background-color: #1a5d7a;
-    width: 700px;
+    width: 90%;
+    max-width: 700px;
     margin: 60px 0;
     padding: 40px 20px;
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; /* 中の要素を中央に配置 */
+    align-items: center; /* 中の要素を中央へ */
 }
 
-/* 中央配置の白いラベル（はま寿司・紹介） */
-.label-wrapper {
+/* ラベルを中央に配置する仕組み */
+.label-center-wrapper {
     position: absolute;
-    top: -25px; /* 上の境界線にまたがるように配置 */
+    top: -25px; /* ボックスの縁に載せる */
     left: 0;
     right: 0;
     display: flex;
-    justify-content: center; /* 文字を中央へ */
+    justify-content: center; /* これで文字が中央に来ます */
 }
 
 .white-label {
@@ -66,7 +67,7 @@ header {
     font-weight: normal;
 }
 
-/* 画像・テキストエリアの設定 */
+/* 画像とテキストのボックス */
 .image-box img {
     max-width: 100%;
     height: auto;
@@ -77,7 +78,7 @@ header {
     background-color: #fff;
     padding: 20px;
     width: 90%;
-    text-align: left; /* 文章は読みやすいよう左揃え */
+    text-align: left; /* 文章は左読み */
     font-size: 15px;
     line-height: 1.8;
 }
