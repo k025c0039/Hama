@@ -1,82 +1,75 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>はま寿司 再現サイト</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <html lang="ja">
+        <head>
+            <meta charset="utf-8">
+            <title>WCB Cafe</title>
+            <meta name="description" content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!--ファビコン-->
+                <link rel="icon" type="image/png" href="images/favicon.png">
 
-    <header>
-        <div class="header-container">
-            <div class="nav-btn">TOP</div>
-            <div class="nav-right">
-                <div class="nav-btn">menu</div>
-                <div class="nav-btn">about</div>
-            </div>
+        <!--リセット CSS-->
+            <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+        <!--Googleフォント-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+
+        <!--オリジナルCSS-->
+            <link rel="stylesheet" href="css/style.css">
+        </head>
+
+        <body>
+            <div class ="cover cover-home">
+                <header class="page-header wrapper">
+                <h1 class="align-center">
+                    <a href="index.html"><img class="logo" src="images/logo.svg" alt="WCBカフェホーム"></a>
+                </h1>
+                <nav>
+                    <ul class="main-nav font-english">
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>            
+                </nav>
+            </header>
+            <h2 class="page-title font-english">We`ll Make Your Day</h2>
+</div>
+    <section class="about">
+        <h3 class="heading-large font-english">About Cafe</h3>
+        <p>
+            WCB CAFEは無添加の源泉食材とおしゃれな店内が魅力のカフェです。心と体に優しい、それでいて飽きのこない空間をご用意しています。
+            素材の本来の美味さを引き出したメニューを楽しみながら、癒しの時間をお過ごしください。
+        </p>
+        <div class="align-center">
+            <a class="btn" href="menu.html">メニューを見る</a>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="blue-section">
-            <div class="inner-content">
-                <h1 class="title-white-box">はま寿司</h1>
-                <div class="image-wrapper">
-                    <img src="shop-outer.jpg" alt="はま寿司 外観">
+            <footer class="page-footer">
+                <h3 class="heading-large font-english">Infomation</h3>
+                <table class="info">
+                    <tr>
+                        <th>住所</th>
+                        <td>東京都港区六本木 0-0 ○○○</td>
+                    </tr>
+                    <tr>
+                        <th>電話</th>
+                        <td>03-1111-XXXX</td>
+                    </tr>
+                    <tr>
+                        <th>営業時間</th>
+                        <td>10:00～20:00</td>
+                    </tr>
+                    <tr>
+                        <th>店休日</th>
+                        <td>水曜</td>
+                    </tr>
+                </table>
+                <div class="copyright">
+                    <small>&copy; 2010 WCB Cafe</small>
                 </div>
-            </div>
-        </section>
-
-        <section class="blue-section">
-            <div class="inner-content">
-                <h2 class="title-white-box">紹介</h2>
-                <div class="text-white-box">
-                    <p>はま寿司は、新鮮な素材の持ち味を大切にし、丁寧に仕上げたお寿司を気軽に楽しめるお店です。</p>
-                    <p>一皿一皿に込めたこだわりと、心地よく過ごせる落ち着いた空間で、どなたでも安心してお食事をお楽しみいただけます。</p>
-                    <p>旬の味わいを引き出した多彩なメニューとともに、ほっと一息つける時間を提供します。</p>
-                    <p>ご家族でも、おひとりでも、心とお腹を満たすひとときをお過ごしください。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="menu-section">
-            <h2 class="title-outline-box">メニュー</h2>
-            <div class="menu-grid">
-                <div class="menu-item"><img src="maguro.jpg" alt="まぐろ"><p>まぐろ<br>100円 (税込110円)</p></div>
-                <div class="menu-item"><img src="salmon.jpg" alt="サーモン"><p>サーモン<br>100円 (税込110円)</p></div>
-                <div class="menu-item"><img src="ebi.jpg" alt="えび"><p>えび<br>100円 (税込110円)</p></div>
-                <div class="menu-item"><img src="tekka.jpg" alt="鉄火巻"><p>鉄火巻<br>160円 (税込176円)</p></div>
-                <div class="menu-item"><img src="natto.jpg" alt="納豆巻"><p>納豆巻<br>100円 (税込110円)</p></div>
-                <div class="menu-item"><img src="kappa.jpg" alt="かっぱ巻"><p>かっぱ巻<br>100円 (税込110円)</p></div>
-            </div>
-
-            <h2 class="title-outline-box">サイドメニュー</h2>
-            <div class="menu-grid">
-                <div class="menu-item"><img src="potato.jpg" alt="ポテト"><p>カリカリポテト<br>220円 (税込242円)</p></div>
-                <div class="menu-item"><img src="chawanmushi.jpg" alt="茶碗蒸し"><p>焼津産かつおだしの特製茶碗蒸し<br>190円 (税込209円)</p></div>
-                <div class="menu-item"><img src="salad.jpg" alt="サラダ"><p>ツナとブロッコリーのタルタルサラダ<br>160円 (税込176円)</p></div>
-            </div>
-        </section>
-
-        <section class="info-section">
-            <h2 class="title-outline-box">情報</h2>
-            <div class="blue-section">
-                <div class="inner-content">
-                    <div class="text-white-box info-text">
-                        <p><strong>住所：</strong>東京都大田区西蒲田7-46-8 蒲田ライトビル5F</p>
-                        <p><strong>電話番号：</strong>0570-081-992</p>
-                        <p><strong>営業時間：</strong>月〜金 11:00〜24:00<br>土日祝 10:00〜24:00</p>
-                        <p>（最終入店：閉店30分前／L.O：閉店15分前）</p>
-                    </div>
-                    <div class="map-area">
-                        <img src="map.png" alt="地図">
-                    </div>
-                    <div class="title-white-box small-box">駐車場なし</div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-</body>
-</html>
+            </footer>
+        </body>
+    </html>
