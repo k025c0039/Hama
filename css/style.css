@@ -1,84 +1,88 @@
-/* 全体のリセット */
+/* ブラウザの初期余白を消し、全体を中央寄せにする準備 */
 body {
     margin: 0;
     padding: 0;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center; /* コンテンツ全体を中央寄せ */
+    align-items: center; /* これで全体が水平中央に来ます */
 }
 
-/* ナビゲーションの配置 (TOPは左、その他は右) */
+/* --- ナビゲーションの配置 --- */
 header {
     width: 100%;
-    max-width: 900px; /* お好みの幅に調整してください */
+    max-width: 900px; /* お好みの幅に調整 */
     padding: 20px;
     box-sizing: border-box;
 }
 
 .nav-container {
     display: flex;
-    justify-content: space-between; /* 左右にわける */
+    justify-content: space-between; /* TOPと右側メニューを両端に飛ばす */
     align-items: center;
 }
 
 .nav-right {
     display: flex;
-    gap: 10px; /* ボタン同士の隙間 */
+    gap: 10px; /* menuとinformationの隙間 */
 }
 
 .nav-btn {
     text-decoration: none;
-    color: #333;
+    color: black;
     border: 1px solid #ccc;
     padding: 8px 20px;
-    background-color: #fff;
+    background-color: white;
 }
 
-/* 青い背景のセクション */
-.blue-section {
+/* --- 青いボックスと中央ラベルの配置 --- */
+.blue-box {
     background-color: #1a5d7a;
-    width: 90%;
+    width: 90vw;
     max-width: 700px;
     margin: 60px 0;
-    padding: 40px 20px;
-    position: relative;
+    padding: 40px 20px 20px;
+    position: relative; /* ラベルを配置するための基準 */
     display: flex;
     flex-direction: column;
-    align-items: center; /* 中の要素を中央へ */
+    align-items: center; /* 中の画像や文字を中央へ */
 }
 
-/* ラベルを中央に配置する仕組み */
-.label-center-wrapper {
+/* ラベルを真ん中に置くためのラッパー */
+.label-wrapper {
     position: absolute;
-    top: -25px; /* ボックスの縁に載せる */
-    left: 0;
-    right: 0;
+    top: -25px; /* ボックスの上に半分出す */
+    width: 100%;
     display: flex;
-    justify-content: center; /* これで文字が中央に来ます */
+    justify-content: center; /* ラベルを中央に配置 */
 }
 
 .white-label {
-    background-color: #fff;
+    background-color: white;
     border: 1px solid #ccc;
     padding: 5px 40px;
     margin: 0;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: normal;
 }
 
-/* 画像とテキストのボックス */
-.image-box img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #fff;
+/* 画像とテキストエリアのスタイル */
+.content-inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.text-box {
-    background-color: #fff;
+.main-img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid white;
+}
+
+.text-area {
+    background-color: white;
     padding: 20px;
     width: 90%;
-    text-align: left; /* 文章は左読み */
-    font-size: 15px;
+    text-align: left; /* 文章は読みやすさのため左揃え */
     line-height: 1.8;
 }
