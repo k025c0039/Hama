@@ -1,68 +1,83 @@
-/* 全体のリセットと基本設定 */
+/* 全体のレイアウト */
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center; /* 全体を中央に寄せる */
+    align-items: center; /* 全体を画面中央に寄せる */
 }
 
-/* ナビゲーションの配置 */
+/* ヘッダー・ナビゲーションの配置 */
+header {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+}
+
 .nav-container {
-    width: 800px;
     display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
+    justify-content: space-between; /* 左右に振り分ける */
+    align-items: center;
 }
 
-.nav-item {
-    border: 1px solid #ccc;
-    padding: 5px 20px;
+.nav-right {
+    display: flex;
+    gap: 10px; /* menuとinformationの間の隙間 */
+}
+
+.nav-btn {
     text-decoration: none;
-    color: black;
-    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 20px;
+    font-size: 18px;
+    background-color: #fff;
 }
 
-/* 青い外枠のボックス */
-.blue-box {
-    background-color: #1a5d7a; /* 濃い青色 */
-    width: 600px;
-    margin-bottom: 50px;
-    padding: 40px 20px 20px 20px;
+/* 青い背景のセクション */
+.blue-section {
+    background-color: #1a5d7a;
+    width: 700px;
+    margin: 60px 0;
+    padding: 40px 20px;
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; /* 中の要素を中央寄せ */
-    border: 1px solid #000;
+    align-items: center; /* 中の要素を中央に配置 */
 }
 
-/* 白いラベルタイトル（はま寿司・紹介） */
-.label-title {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 5px 30px;
+/* 中央配置の白いラベル（はま寿司・紹介） */
+.label-wrapper {
     position: absolute;
-    top: -25px; /* ボックスの線の上に配置 */
+    top: -25px; /* 上の境界線にまたがるように配置 */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center; /* 文字を中央へ */
+}
+
+.white-label {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 40px;
     margin: 0;
+    font-size: 24px;
     font-weight: normal;
-    font-size: 1.5rem;
 }
 
-/* 画像エリア */
-.image-area img {
-    width: 100%;
-    max-width: 500px;
+/* 画像・テキストエリアの設定 */
+.image-box img {
+    max-width: 100%;
     height: auto;
-    border: 1px solid white;
+    border: 2px solid #fff;
 }
 
-/* 紹介文のテキストエリア */
-.text-area {
-    background-color: white;
+.text-box {
+    background-color: #fff;
     padding: 20px;
     width: 90%;
-    text-align: left; /* 文章自体は左揃え */
-    font-size: 0.9rem;
+    text-align: left; /* 文章は読みやすいよう左揃え */
+    font-size: 15px;
     line-height: 1.8;
 }
