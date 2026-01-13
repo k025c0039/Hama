@@ -34,6 +34,7 @@ nav {
     color: #333;
     text-decoration: none;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 
 .nav-links {
@@ -49,6 +50,7 @@ nav {
     margin-left: -1px;
     font-size: 16px;
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .nav-links a:hover {
@@ -85,8 +87,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    color: #666;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* 紹介セクション */
@@ -116,8 +123,8 @@ nav {
     margin-bottom: 20px;
 }
 
-/* メニューセクション */
-.menu-section {
+/* メニュープレビューセクション */
+.menu-preview {
     text-align: center;
     padding: 60px 0;
 }
@@ -129,10 +136,184 @@ nav {
     font-size: 28px;
     font-weight: normal;
     letter-spacing: 8px;
+    margin-bottom: 40px;
+    transition: background-color 0.3s;
+}
+
+.menu-preview .menu-title:hover {
+    background-color: #f0f0f0;
 }
 
 .divider {
     border: none;
     border-top: 1px solid #ddd;
     margin: 60px 0;
+}
+
+/* メニューページ */
+.menu-page {
+    padding: 40px 0;
+}
+
+.menu-page .menu-title {
+    display: block;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item-image {
+    width: 100%;
+    height: 150px;
+    background-color: #e0e0e0;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.menu-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-item-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.menu-item-price {
+    font-size: 14px;
+    color: #666;
+}
+
+.menu-item-note {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* サイドメニュー */
+.side-menu-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 8px;
+    border: 2px solid #333;
+    display: inline-block;
+    padding: 15px 60px;
+    margin: 0 auto 60px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.side-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* INFOMATIONページ */
+.infomation-page {
+    padding: 40px 0;
+}
+
+.info-title {
+    background-color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    border: 2px solid #333;
+    display: inline-block;
+    padding: 15px 60px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-box {
+    background-color: #1a5f7a;
+    padding: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.info-content {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.info-content p {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.info-content .indent {
+    padding-left: 120px;
+}
+
+.info-content .note {
+    font-size: 14px;
+    color: #666;
+}
+
+.map-container {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.map-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.parking-info {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .menu-grid,
+    .side-menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    nav {
+        padding: 0 20px;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
 }

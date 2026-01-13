@@ -9,37 +9,166 @@
 <body>
     <header>
         <nav>
-            <a href="#" class="logo">TOP</a>
+            <a href="#top" class="logo" onclick="showSection('top')">TOP</a>
             <div class="nav-links">
-                <a href="#menu">munu</a>
-                <a href="#about">about</a>
+                <a href="#menu" onclick="showSection('menu')">menu</a>
+                <a href="#infomation" onclick="showSection('infomation')">infomation</a>
             </div>
         </nav>
     </header>
 
-    <div class="container">
-        <section class="hero">
-            <div class="hero-title">はま寿司</div>
-            <div class="hero-image">
-                [店舗外観の画像がここに入ります]
-            </div>
-        </section>
+    <!-- TOPページ -->
+    <div id="top-section" class="page-section">
+        <div class="container">
+            <section class="hero">
+                <div class="hero-title">はま寿司</div>
+                <div class="hero-image">
+                    <img src="images/hama_01_s.jpg" alt="はま寿司店舗外観">
+                </div>
+            </section>
 
-        <section class="introduction">
-            <div class="intro-title">紹介</div>
-            <div class="intro-content">
-                <p>はま寿司は、新鮮な素材の持ち味を大切にし、丁寧に仕上げたお寿司を気軽に楽しめるお店です。</p>
-                <p>一皿一皿に込めたこだわりと、心地よく過ごせる店を演出した空間で、<br>どなたでも安心してお食事をお楽しみいただけます。</p>
-                <p>旬の味わいを引き出した本格的メニューとともに、ほっと寛ぐ時間をご提供します。</p>
-                <p>ご家族でも、おひとりでも、心とお腹を満たすひとときをお過ごしください。</p>
-            </div>
-        </section>
+            <section class="introduction">
+                <div class="intro-title">紹介</div>
+                <div class="intro-content">
+                    <p>はま寿司は、新鮮な素材の持ち味を大切にし、丁寧に仕上げたお寿司を気軽に楽しめるお店です。</p>
+                    <p>一皿一皿に込めたこだわりと、心地よく過ごせる店を演出した空間で、<br>どなたでも安心してお食事をお楽しみいただけます。</p>
+                    <p>旬の味わいを引き出した本格的メニューとともに、ほっと寛ぐ時間をご提供します。</p>
+                    <p>ご家族でも、おひとりでも、心とお腹を満たすひとときをお過ごしください。</p>
+                </div>
+            </section>
 
-        <section class="menu-section">
-            <div class="menu-title">メニュー</div>
-        </section>
+            <section class="menu-preview">
+                <div class="menu-title" onclick="showSection('menu')" style="cursor: pointer;">メニュー</div>
+            </section>
 
-        <hr class="divider">
+            <hr class="divider">
+        </div>
     </div>
+
+    <!-- メニューページ -->
+    <div id="menu-section" class="page-section" style="display: none;">
+        <div class="container">
+            <section class="menu-page">
+                <div class="menu-title">メニュー</div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/pho_maguro.png" alt="まぐろ">
+                        </div>
+                        <p class="menu-item-name">まぐろ</p>
+                        <p class="menu-item-price">100円（税込110円）</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/pho_salmon.png" alt="サーモン">
+                        </div>
+                        <p class="menu-item-name">サーモン</p>
+                        <p class="menu-item-price">100円（税込110円）</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/pho_ebi.png" alt="えび">
+                        </div>
+                        <p class="menu-item-name">えび</p>
+                        <p class="menu-item-price">100円（税込110円）</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/pho_maguro_tekka_maki.png" alt="鉄火巻">
+                        </div>
+                        <p class="menu-item-name">鉄火巻</p>
+                        <p class="menu-item-price">160円（税込176円）</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/pho_nattomaki.png" alt="納豆巻">
+                        </div>
+                        <p class="menu-item-name">納豆巻</p>
+                        <p class="menu-item-price">100円（税込110円）</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/pho_kapamaki.png" alt="かっぱ巻">
+                        </div>
+                        <p class="menu-item-name">かっぱ巻</p>
+                        <p class="menu-item-price">100円（税込110円）</p>
+                    </div>
+                </div>
+
+                <div class="side-menu-title">サイドメニュー</div>
+                
+                <div class="side-menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/pho_karikari_potato.png" alt="カリカリポテト">
+                        </div>
+                        <p class="menu-item-name">カリカリポテト</p>
+                        <p class="menu-item-price">220円（税込242円）</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/pho_chawanmushi.png" alt="茶碗蒸し">
+                        </div>
+                        <p class="menu-item-name">焼津産かつおだしの<br>特製茶碗蒸し</p>
+                        <p class="menu-item-price">190円（税込209円）</p>
+                        <p class="menu-item-note">※お持ち帰り不可</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="images/pho_tuna_broccoli_tarutarusalad.png" alt="サラダ">
+                        </div>
+                        <p class="menu-item-name">ツナとアボカドの<br>タルタルサラダ</p>
+                        <p class="menu-item-price">160円（税込176円）</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- INFOMATIONページ -->
+    <div id="infomation-section" class="page-section" style="display: none;">
+        <div class="container">
+            <section class="infomation-page">
+                <div class="info-title">情報</div>
+                
+                <div class="info-box">
+                    <div class="info-content">
+                        <p><strong>住所：</strong>東京都大田区西蒲田7-46-8 蒲田ライトビル5F</p>
+                        <p><strong>電話番号：</strong>0570-081-992</p>
+                        <p><strong>営業時間：</strong>月～金　11:00～24:00</p>
+                        <p class="indent">土日祝　10:00～24:00</p>
+                        <p class="note">（最終入店：閉店30分前／L.O：閉店15分前）</p>
+                    </div>
+                    
+                    <div class="map-container">
+                        <img src="images/スクリーンショット 2026-01-13 150146.png" alt="店舗地図">
+                    </div>
+                    
+                    <div class="parking-info">
+                        <p>駐車場なし</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function showSection(section) {
+            // すべてのセクションを非表示
+            document.querySelectorAll('.page-section').forEach(sec => {
+                sec.style.display = 'none';
+            });
+            
+            // 選択されたセクションを表示
+            if (section === 'top') {
+                document.getElementById('top-section').style.display = 'block';
+            } else if (section === 'menu') {
+                document.getElementById('menu-section').style.display = 'block';
+            } else if (section === 'infomation') {
+                document.getElementById('infomation-section').style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
